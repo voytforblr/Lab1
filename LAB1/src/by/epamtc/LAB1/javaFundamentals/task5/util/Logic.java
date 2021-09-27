@@ -3,6 +3,19 @@ package by.epamtc.LAB1.javaFundamentals.task5.util;
 public class Logic {
 
     public static int findLIS(int[] mas) {
+
+        boolean isSort=true;
+        for (int i = 0; i <mas.length-1 ; i++) {
+            if(mas[i]>mas[i+1]){
+                isSort=false;
+                break;
+            }
+        }
+
+        if(isSort){
+            return 0;
+        }
+
         int n = mas.length;
         int length = 0;
         final int MIN = -2147483648;
